@@ -1,0 +1,7 @@
+coco lo que agregue fue lo de añadiruser.php lo que se tiene que llamar en el action del form y el method debe de ser post
+
+<form action="./añadiruser" method="post">
+    tus input
+</form>
+
+y haci con el otro que es el iniciarsesion.php igual que el method post

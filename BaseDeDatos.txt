@@ -1,0 +1,36 @@
+CREATE TABLE tipo(
+id int AUTO_INCREMENT PRIMARY KEY,
+    nombre varchar(20)
+);
+INSERT INTO tipo('nombre') VALUES ('hombre');
+INSERT INTO tipo('nombre') VALUES ('mujer');
+INSERT INTO tipo('nombre') VALUES ('niño');
+INSERT INTO tipo('nombre') VALUES ('unisex');
+
+CREATE TABLE zapatos(
+id int AUTO_INCREMENT PRIMARY KEY,
+    nombre varchar(20),
+    precio double,
+    tipoCalzado int,
+    FOREIGN KEY (tipoCalzado) REFERENCES tipo(id),
+    colores int,
+    cantidad int,
+    foto varchar(255)
+);
+CREATE TABLE carrito(
+id int AUTO_INCREMENT PRIMARY KEY,
+    id_user int,
+    id_zapato int,
+    total int,
+    FOREIGN KEY (id_zapato) REFERENCES zapatos(id)
+)
+
+es este el de usuairo
+CREATE TABLE user(
+    id int AUTO_INCREMENT PRIMARY KEY,
+    nombre varchar(20),
+    apellido varchar(20),
+    correo varchar(250),
+    contrasema varchar(20),
+    fechaNacimientp varchar(20)
+)
